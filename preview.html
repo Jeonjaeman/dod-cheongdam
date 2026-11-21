@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>디오디청담 홈페이지 리뉴얼 화면 예시 | 탱탱소프트</title>
+<meta name="description" content="디오디피부과의원 청담 홈페이지 리뉴얼 콘셉트 화면 시연 (병원 승인 전, 실제 진료·가격 안내 아님)">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap">
+<style>
+:root{
+  --ivory:#f7f4ee;--paper:#fffdf9;--sand:#ece6db;--line:#ddd5c7;--line2:#cfc5b4;
+  --ink:#1d2220;--mut:#5b625e;--mut2:#868c87;
+  --teal:#0e4a47;--teal2:#16625e;--teal-bg:#e3eeec;--gold:#a88a5a;
+  --demo:#b4441f;--demo-bg:#fbeee8;
+  --f:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;
+  --serif:"Noto Serif KR","Nanum Myeongjo",serif;
+  --latin:"Playfair Display",Georgia,serif;
+  --w:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--f);line-height:1.7;word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--teal2)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+@media(max-width:640px){.wrap{padding:0 18px}}
+
+/* 시연 띠 (상시) */
+.demo-bar{position:sticky;top:0;z-index:40;background:var(--demo);color:#fff;font-size:13px;font-weight:600;text-align:center;padding:8px 14px;line-height:1.5}
+.demo-bar a{color:#fff;text-decoration:underline;margin-left:8px;white-space:nowrap}
+
+/* 안내(제안서 쪽 설명) */
+.guide{background:#14201e;color:#e9efed}
+.guide .wrap{padding-top:44px;padding-bottom:44px}
+.guide small{font-size:12px;letter-spacing:.14em;font-weight:700;color:#9fc9c3}
+.guide h1{font-size:clamp(26px,4.4vw,40px);line-height:1.3;margin:10px 0 12px;letter-spacing:-.02em}
+.guide p{margin:0;color:#c3ceca;max-width:760px}
+.guide ol{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+.guide ol a{display:inline-block;font-size:13px;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.22);padding:6px 12px;border-radius:999px}
+.guide ol a:hover{background:rgba(255,255,255,.08)}
+
+/* 비교 메모 */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 30px}
+.cmp div{border-radius:14px;padding:16px 18px;font-size:14px;line-height:1.65}
+.cmp .now{background:var(--paper);border:1px dashed var(--line2);color:var(--mut)}
+.cmp .new{background:var(--teal-bg);border:1px solid #c4dcd8;color:#21423f}
+.cmp b{display:block;font-size:12px;letter-spacing:.08em;margin-bottom:4px}
+.cmp .now b{color:var(--mut2)}
+.cmp .new b{color:var(--teal)}
+.cmp .src{display:block;margin-top:6px;font-size:12px;color:var(--mut2)}
+@media(max-width:720px){.cmp{grid-template-columns:1fr}}
+
+.part{padding:70px 0;border-top:1px solid var(--line)}
+.part-h{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--gold);margin:0 0 6px}
+.part-t{font-size:clamp(22px,3.4vw,30px);margin:0 0 20px;letter-spacing:-.02em}
+
+/* 견본 프레임 (병원 사이트 톤) */
+.frame{background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 18px 50px rgba(30,40,36,.08)}
+.frame-tag{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 18px;font-size:12px;color:var(--mut2);border-bottom:1px solid var(--line);background:#faf7f1}
+.frame-tag .dot{display:inline-flex;gap:5px}
+.frame-tag .dot i{width:9px;height:9px;border-radius:50%;background:var(--line2)}
+.chip-demo{display:inline-block;font-size:11px;font-weight:700;color:var(--demo);background:var(--demo-bg);border:1px solid #f1c9b9;padding:2px 8px;border-radius:999px;white-space:nowrap}
+
+/* 홈 견본 */
+.site-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--line)}
+.logo{font-family:var(--latin);font-size:19px;letter-spacing:.12em;color:var(--teal)}
+.logo small{display:block;font-family:var(--f);font-size:10px;letter-spacing:.2em;color:var(--mut2)}
+.site-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--mut)}
+@media(max-width:760px){.site-nav ul{display:none}}
+.hero{padding:64px 28px 52px;text-align:center;background:linear-gradient(180deg,#fffdf9,#f3eee4)}
+.hero .latin{font-family:var(--latin);font-style:italic;color:var(--gold);font-size:18px}
+.hero h2{font-family:var(--serif);font-size:clamp(26px,4.6vw,42px);line-height:1.35;margin:10px 0 14px;color:var(--teal);font-weight:700}
+.hero p{max-width:560px;margin:0 auto;color:var(--mut);font-size:16px}
+.concern{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0 28px 34px;margin-top:-10px}
+@media(max-width:760px){.concern{grid-template-columns:1fr}}
+.concern button{text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;transition:.2s;color:var(--ink)}
+.concern button:hover{border-color:var(--teal2);transform:translateY(-2px)}
+.concern button[aria-pressed="true"]{border-color:var(--teal);box-shadow:0 0 0 2px var(--teal) inset;background:#f6fbfa}
+.concern strong{display:block;font-family:var(--serif);font-size:19px;color:var(--teal)}
+.concern span{display:block;font-size:14px;color:var(--mut);margin-top:4px}
+.concern em{display:block;font-style:normal;font-size:12px;color:var(--gold);margin-top:10px;font-weight:700}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+@media(max-width:760px){.values{grid-template-columns:1fr}}
+.values div{padding:22px 28px;border-right:1px solid var(--line)}
+.values div:last-child{border-right:0}
+@media(max-width:760px){.values div{border-right:0;border-bottom:1px solid var(--line)}}
+.values b{font-family:var(--serif);color:var(--teal);font-size:16px}
+.values p{margin:4px 0 0;font-size:13px;color:var(--mut)}
+
+/* 상세 견본 */
+.detail{padding:40px 28px}
+.detail .kind{font-size:12px;color:var(--gold);font-weight:700;letter-spacing:.06em}
+.detail h3{font-family:var(--serif);font-size:clamp(22px,3.6vw,30px);color:var(--teal);margin:6px 0 10px;line-height:1.4}
+.detail .sum{color:var(--mut);max-width:720px;margin:0 0 26px}
+.spec{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:760px){.spec{grid-template-columns:1fr}}
+.spec div{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:#fff}
+.spec dt{font-size:13px;font-weight:800;color:var(--teal);display:flex;align-items:center;gap:8px}
+.spec dt i{font-style:normal;font-size:11px;color:#fff;background:var(--teal);border-radius:6px;padding:1px 7px}
+.spec dd{margin:6px 0 0;font-size:14px;color:var(--mut)}
+.spec .field{color:var(--mut2);border-bottom:1px dashed var(--line2)}
+.faq{margin-top:22px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:14px 2px}
+.faq summary{cursor:pointer;font-weight:700;color:var(--ink)}
+.faq p{margin:8px 0 0;color:var(--mut);font-size:14px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:11px 20px;font-size:14px;font-weight:700;text-decoration:none;border:1px solid var(--teal);background:var(--teal);color:#fff}
+.btn.ghost{background:transparent;color:var(--teal)}
+.btn.sm{padding:8px 14px;font-size:13px}
+.locked{display:none}
+.panel-note{margin:0 28px 30px;padding:18px 20px;border-radius:14px;background:#faf7f1;border:1px dashed var(--line2);font-size:14px;color:var(--mut)}
+
+/* 이벤트 견본 */
+.ev-wrap{padding:36px 28px}
+.ev-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.ev-head h3{font-family:var(--serif);color:var(--teal);margin:0;font-size:24px}
+.filter{display:flex;gap:6px;flex-wrap:wrap}
+.filter button{border:1px solid var(--line2);background:#fff;color:var(--mut);border-radius:999px;padding:6px 14px;font-size:13px}
+.filter button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.evs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.evs{grid-template-columns:1fr}}
+.ev{border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.ev[hidden]{display:none}
+.ev-img{aspect-ratio:16/8;background:linear-gradient(135deg,#1a5a56,#0e3532);position:relative;display:flex;align-items:flex-end;padding:16px;color:#fff}
+.ev.b .ev-img{background:linear-gradient(135deg,#a88a5a,#6f5a39)}
+.ev-img .latin{font-family:var(--latin);font-style:italic;font-size:15px;opacity:.85}
+.ev-img .vtag{position:absolute;top:12px;left:12px}
+.ev-img small{position:absolute;top:14px;right:14px;font-size:11px;opacity:.8}
+.ev-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.status{display:inline-block;font-size:12px;font-weight:800;border-radius:6px;padding:2px 8px;margin-bottom:8px}
+.status.on{background:#e2f2ec;color:#16674b}
+.status.soon{background:#f4ecdc;color:#87642a}
+.status.off{background:#ececec;color:#6f6f6f}
+.ev h4{margin:0 0 6px;font-size:18px;font-family:var(--serif);color:var(--ink)}
+.ev .s{margin:0 0 12px;font-size:14px;color:var(--mut)}
+.ev dl{margin:0 0 14px;display:grid;grid-template-columns:72px 1fr;gap:6px 10px;font-size:13px}
+.ev dt{color:var(--mut2);font-weight:700}
+.ev dd{margin:0;color:var(--mut);border-bottom:1px dashed var(--line2)}
+.ev .ctas{margin-top:auto}
+.ev.ended{opacity:.72}
+
+/* 관리 시연 */
+.adm{background:#f1f3f2}
+.adm-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;background:#20302e;color:#dfe8e6;padding:12px 20px;font-size:13px}
+.adm-bar b{color:#fff}
+.adm-body{display:grid;grid-template-columns:220px 1fr;min-height:320px}
+@media(max-width:760px){.adm-body{grid-template-columns:1fr}}
+.adm-side{background:#fff;border-right:1px solid #dde2e0;padding:18px;font-size:13px}
+@media(max-width:760px){.adm-side{border-right:0;border-bottom:1px solid #dde2e0}}
+.adm-side ul{list-style:none;margin:8px 0 0;padding:0}
+.adm-side li{padding:7px 10px;border-radius:8px;color:#4f5a57}
+.adm-side li.on{background:var(--teal-bg);color:var(--teal);font-weight:700}
+.adm-main{padding:20px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;margin-bottom:18px}
+.flow span{background:#fff;border:1px solid #d6dcda;border-radius:999px;padding:4px 10px;color:#4f5a57}
+.flow span.cur{border-color:var(--teal);color:var(--teal);font-weight:800}
+.flow i{font-style:normal;color:#a5adaa}
+.adm-card{background:#fff;border:1px solid #dde2e0;border-radius:14px;padding:18px}
+.adm-card h5{margin:0 0 12px;font-size:15px}
+.row{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center;font-size:13px;margin-bottom:10px}
+@media(max-width:480px){.row{grid-template-columns:1fr;gap:4px}}
+.row label{color:#5f6966;font-weight:700}
+.row .ro{background:#f6f7f7;border:1px solid #e3e7e5;border-radius:8px;padding:7px 10px;color:#7a8380}
+.row select{font:inherit;font-size:13px;padding:7px 10px;border-radius:8px;border:1px solid #c9d1ce;background:#fff;max-width:240px}
+.adm-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.toast{margin-top:14px;font-size:13px;min-height:1.6em;color:var(--teal);font-weight:700}
+
+/* 모달 */
+.modal{position:fixed;inset:0;z-index:60;background:rgba(20,28,26,.55);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-box{background:var(--paper);border-radius:18px;max-width:480px;width:100%;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.25);position:relative;max-height:calc(100vh - 40px);overflow:auto}
+.modal-box h4{font-family:var(--serif);color:var(--teal);margin:6px 0 10px;font-size:21px;padding-right:36px}
+.modal-box p{margin:0 0 12px;color:var(--mut);font-size:14px}
+.modal-box dl{display:grid;grid-template-columns:88px 1fr;gap:8px 12px;font-size:14px;margin:0 0 16px}
+.modal-box dt{color:var(--mut2);font-weight:700}
+.modal-box dd{margin:0;color:var(--ink)}
+.x{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line2);background:#fff;font-size:18px;line-height:1;color:var(--mut)}
+
+footer{padding:40px 0 60px;font-size:13px;color:var(--mut2);border-top:1px solid var(--line)}
+footer p{margin:0 0 8px}
+footer a{color:var(--teal2)}
+</style>
+</head>
+<body>
+
+<div class="demo-bar" role="note">리뉴얼 콘셉트 예시 · 병원 승인 전 · 실제 진료/가격 안내 및 예약 화면이 아닙니다.<a href="./index.html">제안서로 돌아가기</a></div>
+
+<header class="guide">
+  <div class="wrap">
+    <small>탱탱소프트 · 리뉴얼 화면 예시</small>
+    <h1>글로 설명한 리뉴얼 방향을,<br>직접 눌러 보며 확인해 보세요</h1>
+    <p>제안서에서 말씀드린 ‘규격화된 리뉴얼’이 실제 화면에서 어떻게 보이는지 보여 드리는 디자인 시연입니다. 각 장면 위에 지금 홈페이지와 무엇이 달라지는지 짧게 적어 두었습니다. 버튼과 선택은 실제로 동작하지만, 아무것도 저장하거나 전송하지 않습니다.</p>
+    <ol>
+      <li><a href="#p1">① 고민에서 시작하는 홈</a></li>
+      <li><a href="#p2">② 시술 안내의 규격</a></li>
+      <li><a href="#p3">③ 글자로 읽히는 이벤트</a></li>
+      <li><a href="#p4">④ 직원용 운영 시연</a></li>
+    </ol>
+  </div>
+</header>
+
+<main>
+
+<!-- ① 홈 -->
+<section class="part" id="p1">
+  <div class="wrap">
+    <p class="part-h">SCENE 01</p>
+    <h2 class="part-t">고민에서 시작하는 홈</h2>
+    <div class="cmp">
+      <div class="now"><b>지금 홈페이지</b>첫 화면은 공간의 품격과 ‘Dejuvenation on demand’ 메시지가 중심이고, 시술은 메뉴에서 장비 이름(울쎄라·써마지 등)으로 찾아 들어갑니다.<span class="src">출처: <a href="https://www.dodskin.com/" target="_blank" rel="noopener">dodskin.com</a> · 2026-11-21 확인</span></div>
+      <div class="new"><b>리뉴얼 예시</b>지금의 품격과 메시지는 그대로 두고, 그 바로 아래에서 <strong>‘나의 고민’을 먼저 고르면</strong> 맞는 진료 안내로 이어지는 길을 하나 더 냅니다.</div>
+    </div>
+
+    <div class="frame">
+      <div class="frame-tag"><span class="dot"><i></i><i></i><i></i></span><span class="chip-demo">화면 구성 예시</span></div>
+      <nav class="site-nav" aria-label="견본 메뉴">
+        <div class="logo">D.O.D.<small>CHEONGDAM · 홈페이지 리뉴얼 콘셉트</small></div>
+        <ul><li>고민별 안내</li><li>진료 안내</li><li>프로그램</li><li>병원 소개</li></ul>
+      </nav>
+      <div class="hero">
+        <div class="latin">Dejuvenation on demand</div>
+        <h2>나의 고민에서 시작하는<br>안티에이징 상담</h2>
+        <p>장비 이름을 먼저 고르기보다, 고민에 맞는 진료 정보를 살펴보고 의료진에게 상담할 내용을 정리합니다.</p>
+      </div>
+      <div class="concern" role="group" aria-label="고민 선택 예시">
+        <button type="button" data-concern="lift" aria-pressed="false"><strong>처짐·탄력</strong><span>리프팅 진료 안내를 살펴봅니다.</span><em>눌러 보세요 → 진료 안내 예시</em></button>
+        <button type="button" data-concern="booster" aria-pressed="false"><strong>피부결·볼륨</strong><span>부스터 진료 정보를 연결하는 구성 예시입니다.</span><em>눌러 보세요 → 연결 안내</em></button>
+        <button type="button" data-concern="tone" aria-pressed="false"><strong>색소·흉터</strong><span>고민별 진료 정보를 연결하는 구성 예시입니다.</span><em>눌러 보세요 → 연결 안내</em></button>
+      </div>
+      <div class="panel-note" id="concern-note" hidden tabindex="-1"></div>
+      <div class="values">
+        <div><b>전문의 중심 진료 소개</b><p>기존 홈페이지에서 소개하는 의료진 정보를 연결하는 위치입니다.</p></div>
+        <div><b>프라이빗한 진료 과정</b><p>기존 홈페이지의 공간·진료 과정 소개를 연결하는 위치입니다.</p></div>
+        <div><b>리프팅·부스터·재생의학 콘텐츠</b><p>기존 홈페이지의 진료 콘텐츠를 연결하는 위치입니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ② 상세 -->
+<section class="part" id="p2">
+  <div class="wrap">
+    <p class="part-h">SCENE 02</p>
+    <h2 class="part-t">시술 안내의 규격</h2>
+    <div class="cmp">
+      <div class="now"><b>지금 홈페이지</b>시술마다 소개 방식과 순서가 조금씩 다르고, 상당 부분이 이미지 안에 담겨 있어 사람은 볼 수 있지만 검색엔진·AI가 읽을 수 있는 글자는 적습니다.<span class="src">출처: <a href="https://www.dodskin.com/thermage" target="_blank" rel="noopener">dodskin.com/thermage</a> 등 · 2026-11-21 확인</span></div>
+      <div class="new"><b>리뉴얼 예시</b>모든 진료 안내를 <strong>같은 항목·같은 순서</strong>로 정리합니다. 비어 있는 항목이 한눈에 보이고, 의료진 검수 정보까지 글자로 남습니다.</div>
+    </div>
+
+    <div class="frame" id="detail">
+      <div class="frame-tag"><span class="dot"><i></i><i></i><i></i></span><span class="chip-demo">화면 구성 예시</span></div>
+      <div class="detail">
+        <div class="kind">리프팅 진료 안내 — 화면 구성 예시</div>
+        <h3>처짐·탄력, 무엇부터 상담하면 좋을까요?</h3>
+        <p class="sum">피부 상태와 고민 부위, 원하는 변화와 일정을 의료진과 함께 확인하는 진료 안내 화면입니다. 특정 장비나 시술을 추천·확정하지 않습니다.</p>
+        <dl class="spec">
+          <div><dt><i>1</i>상담할 고민</dt><dd>고민 부위와 시작 시기, 이전 시술 경험, 중요한 일정을 정리합니다.</dd></div>
+          <div><dt><i>2</i>선택 기준</dt><dd>장비 이름만으로 결정하지 않고 의료진이 피부 상태를 확인한 뒤 적합성을 판단합니다.</dd></div>
+          <div><dt><i>3</i>진료 과정</dt><dd>상담·진단 → 방법과 비용 설명 → 동의 후 진행 → 시술 후 안내의 순서를 보여주는 구성 예시입니다. 실제 절차는 병원 확인 후 확정합니다.</dd></div>
+          <div><dt><i>4</i>시간·회복</dt><dd>시술 종류와 개인 상태에 따라 달라집니다. 실제 안내 내용은 의료진 검수 후 표시합니다.</dd></div>
+          <div><dt><i>5</i>주의사항</dt><dd>부작용·금기·주의사항은 선택한 시술과 개인 상태에 따라 의료진의 안내를 확인해야 합니다.</dd></div>
+          <div><dt><i>6</i>비용 기준</dt><dd><span class="field">병원 승인 가격</span> / <span class="field">적용 부위·샷수·횟수</span> / <span class="field">VAT·포함·제외 조건</span>을 함께 표시하는 영역입니다.</dd></div>
+          <div><dt><i>7</i>감수 정보</dt><dd><span class="field">의료진 검수 후 이름·수정일 표시 예정</span></dd></div>
+        </dl>
+        <div class="faq">
+          <details><summary>어떤 장비를 골라야 하나요?</summary><p>이 예시 화면에서 장비를 추천하지 않습니다. 실제 페이지에는 의료진이 승인한 선택 기준과 비교 안내를 제공합니다.</p></details>
+        </div>
+        <div class="ctas">
+          <a class="btn" href="#p3">관련 프로그램 구성 보기</a>
+          <button type="button" class="btn ghost" data-open="consult">상담 동선 예시 보기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 이벤트 -->
+<section class="part" id="p3">
+  <div class="wrap">
+    <p class="part-h">SCENE 03</p>
+    <h2 class="part-t">글자로 읽히는 이벤트</h2>
+    <div class="cmp">
+      <div class="now"><b>지금 홈페이지</b>이벤트는 공들인 이미지 카드로 안내되고, 이미지 안에 일부 가격도 들어 있습니다. 다만 기간·대상·조건·진행 상태가 글자로 따로 정리돼 있지 않아 검색·AI는 내용을 읽기 어렵고, 종료 여부도 이미지를 바꿔야만 알 수 있습니다.<span class="src">출처: <a href="https://www.dodskin.com/event" target="_blank" rel="noopener">dodskin.com/event</a> · 2026-11-21 확인</span></div>
+      <div class="new"><b>리뉴얼 예시</b>이미지는 그대로 살리고, 그 아래에 <strong>상태·기간·대상·비용·포함/제외·유의사항</strong>을 정해진 칸으로 붙입니다. 진행 중인 것만 골라 볼 수도 있습니다.</div>
+    </div>
+
+    <div class="frame">
+      <div class="frame-tag"><span class="dot"><i></i><i></i><i></i></span><span class="chip-demo">가상 이벤트 · 운영 방식 시연용</span></div>
+      <div class="ev-wrap">
+        <div class="ev-head">
+          <h3>프로그램</h3>
+          <div class="filter" role="group" aria-label="상태로 거르기">
+            <button type="button" data-filter="all" aria-pressed="true">전체</button>
+            <button type="button" data-filter="on" aria-pressed="false">진행 중</button>
+            <button type="button" data-filter="soon" aria-pressed="false">예정</button>
+            <button type="button" data-filter="off" aria-pressed="false">종료</button>
+          </div>
+        </div>
+        <div class="evs">
+          <article class="ev a" id="evA" data-state="on">
+            <div class="ev-img"><span class="chip-demo vtag">가상 이벤트 · 운영 방식 시연용</span><small>이미지 영역</small><span class="latin">First visit</span></div>
+            <div class="ev-body">
+              <span class="status on" data-status>진행 중 [시연]</span>
+              <h4>첫 방문 상담 프로그램 — 구성 예시</h4>
+              <p class="s">처음 방문하는 분이 상담 과정과 적용 조건을 확인하는 화면 예시입니다.</p>
+              <dl>
+                <dt>기간</dt><dd>시작일·종료일 입력 영역</dd>
+                <dt>대상</dt><dd>병원 승인 대상 조건 표시</dd>
+                <dt>비용</dt><dd>병원 승인 금액 표시</dd>
+                <dt>포함/제외</dt><dd>상담·검사·시술 포함 여부를 구분해 표시</dd>
+                <dt>유의사항</dt><dd>중복 적용·예약 조건 등 병원 승인 내용 표시</dd>
+              </dl>
+              <div class="ctas">
+                <button type="button" class="btn sm" data-open="evA">조건 자세히 보기</button>
+                <button type="button" class="btn sm ghost" data-open="consult">상담 안내 시연</button>
+              </div>
+            </div>
+          </article>
+          <article class="ev b" id="evB" data-state="soon">
+            <div class="ev-img"><span class="chip-demo vtag">가상 이벤트 · 운영 방식 시연용</span><small>이미지 영역</small><span class="latin">Weekday program</span></div>
+            <div class="ev-body">
+              <span class="status soon" data-status>예정 [시연]</span>
+              <h4>요일별 진료 안내 — 구성 예시</h4>
+              <p class="s">예약 가능한 요일과 적용 범위를 확인하는 화면 예시입니다.</p>
+              <dl>
+                <dt>일정</dt><dd>적용 요일·운영 기간 입력 영역</dd>
+                <dt>대상</dt><dd>병원 승인 대상 조건 표시</dd>
+                <dt>비용</dt><dd>병원 승인 금액 표시</dd>
+                <dt>포함/제외</dt><dd>적용 시술·부위·횟수 등 조건 표시</dd>
+                <dt>유의사항</dt><dd>예약 상황에 따라 확인이 필요한 사항 표시</dd>
+              </dl>
+              <div class="ctas">
+                <button type="button" class="btn sm" data-open="evB">조건 자세히 보기</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p id="ev-empty" class="panel-note" hidden style="margin:16px 0 0">이 상태의 프로그램이 없습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 관리 -->
+<section class="part" id="p4">
+  <div class="wrap">
+    <p class="part-h">SCENE 04</p>
+    <h2 class="part-t">직원용 운영 시연</h2>
+    <div class="cmp">
+      <div class="now"><b>지금 운영 방식</b>이벤트를 바꾸거나 끝낼 때 이미지를 새로 만들어 교체하는 방식이라, 담당자가 바뀌면 종료된 안내가 남거나 조건 표기가 달라지기 쉽습니다.</div>
+      <div class="new"><b>리뉴얼 예시</b>직원은 정해진 칸만 채우고 상태를 바꿉니다. <strong>바꾼 상태가 홈페이지 목록·필터에 그대로 반영</strong>됩니다. 아래에서 직접 바꿔 보세요.</div>
+    </div>
+
+    <div class="frame adm">
+      <div class="adm-bar"><b>관리 화면 콘셉트</b><span>실제 관리자 시스템 아님 · 변경사항은 저장되지 않음</span></div>
+      <div class="adm-body">
+        <div class="adm-side">
+          <strong>운영 메뉴 (예시)</strong>
+          <ul><li>진료 안내</li><li class="on">프로그램·이벤트</li><li>자주 묻는 질문</li><li>검수 대기</li></ul>
+        </div>
+        <div class="adm-main">
+          <div class="flow" aria-label="승인 흐름 예시">
+            <span>입력</span><i>→</i><span>담당자/의료진 확인</span><i>→</i><span>승인</span><i>→</i><span class="cur" id="flow-pub">게시</span><i>→</i><span id="flow-end">종료</span>
+          </div>
+          <div class="adm-card">
+            <h5>첫 방문 상담 프로그램 — 구성 예시</h5>
+            <div class="row"><label>기간</label><div class="ro">시작일·종료일 입력 영역</div></div>
+            <div class="row"><label>비용</label><div class="ro">병원 승인 금액 표시</div></div>
+            <div class="row"><label for="st">상태</label>
+              <select id="st"><option value="on">진행 중 [시연]</option><option value="soon">예정 [시연]</option><option value="off">종료 [시연]</option></select>
+            </div>
+            <p style="margin:6px 0 0;font-size:12px;color:#7a8380">흐름 표시는 이해를 돕는 그림이며, 실제 검수·권한 체계가 구현된 것은 아닙니다.</p>
+            <div class="adm-actions">
+              <button type="button" class="btn sm" id="apply">시연 적용</button>
+              <button type="button" class="btn sm ghost" id="reset">초기화</button>
+              <a class="btn sm ghost" href="#p3">목록에서 확인</a>
+            </div>
+            <div class="toast" id="toast" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>이 페이지는 홈페이지 구조와 운영 방식의 이해를 돕는 디자인 시연입니다. 입력값은 저장·전송하지 않으며, 실제 상담·예약은 접수되지 않습니다.</p>
+    <p>시연 화면의 문구·로고 표기·색상은 콘셉트 예시이며 병원 승인 전입니다. 실제 진료 정보·가격·혜택은 병원 확인 후 확정합니다.</p>
+    <p><a href="./index.html">리뉴얼 제안서</a> · <a href="./report.html">AI 검색 상세 진단 보고서</a> · 탱탱소프트 · 2026-11-21</p>
+  </div>
+</footer>
+
+<!-- 모달 -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button type="button" class="x" id="m-close" aria-label="닫기">×</button>
+    <span class="chip-demo" id="m-chip">시연</span>
+    <h4 id="m-title"></h4>
+    <div id="m-body"></div>
+    <div class="ctas"><button type="button" class="btn sm" id="m-ok">예시 계속 보기</button><button type="button" class="btn sm ghost" id="m-close2">닫기</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var M = {
+    consult:{chip:'상담 연결 방식 예시',title:'상담 연결 방식 예시',body:'<p>실제 제작 시 선택한 고민·시술·이벤트를 확인하고 병원에서 승인한 상담 경로로 연결합니다. 지금은 디자인 시연이므로 예약과 문의가 접수되지 않습니다.</p>'},
+    evA:{chip:'가상 이벤트 · 운영 방식 시연용',title:'첫 방문 상담 프로그램 — 구성 예시',body:'<p>처음 방문하는 분이 상담 과정과 적용 조건을 확인하는 화면 예시입니다.</p><dl><dt>상태</dt><dd data-mstatus></dd><dt>기간</dt><dd>시작일·종료일 입력 영역</dd><dt>대상</dt><dd>병원 승인 대상 조건 표시</dd><dt>비용</dt><dd>병원 승인 금액 표시</dd><dt>포함/제외</dt><dd>상담·검사·시술 포함 여부를 구분해 표시</dd><dt>유의사항</dt><dd>중복 적용·예약 조건 등 병원 승인 내용 표시</dd></dl><p>신규 혜택이나 할인율을 제안·확약하는 카드가 아니라, 운영 규격을 보여 드리는 시연입니다.</p>'},
+    evB:{chip:'가상 이벤트 · 운영 방식 시연용',title:'요일별 진료 안내 — 구성 예시',body:'<p>예약 가능한 요일과 적용 범위를 확인하는 화면 예시입니다.</p><dl><dt>상태</dt><dd data-mstatus></dd><dt>일정</dt><dd>적용 요일·운영 기간 입력 영역</dd><dt>대상</dt><dd>병원 승인 대상 조건 표시</dd><dt>비용</dt><dd>병원 승인 금액 표시</dd><dt>포함/제외</dt><dd>적용 시술·부위·횟수 등 조건 표시</dd><dt>유의사항</dt><dd>예약 상황에 따라 확인이 필요한 사항 표시</dd></dl><p>신규 혜택이나 할인율을 제안·확약하는 카드가 아니라, 운영 규격을 보여 드리는 시연입니다.</p>'}
+  };
+  var LABEL = {on:'진행 중 [시연]',soon:'예정 [시연]',off:'종료 [시연]'};
+  var modal = document.getElementById('modal'), lastFocus = null;
+  function openModal(key){
+    var d = M[key]; if(!d) return;
+    lastFocus = document.activeElement;
+    document.getElementById('m-chip').textContent = d.chip;
+    document.getElementById('m-title').textContent = d.title;
+    document.getElementById('m-body').innerHTML = d.body;
+    var ms = document.querySelector('#m-body [data-mstatus]');
+    if(ms){ ms.textContent = LABEL[document.getElementById(key).dataset.state]; }
+    modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+    document.getElementById('m-close').focus();
+  }
+  function closeModal(){
+    modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+    if(lastFocus) lastFocus.focus();
+  }
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-open]'); if(t){ openModal(t.dataset.open); }
+  });
+  ['m-close','m-close2','m-ok'].forEach(function(id){ document.getElementById(id).addEventListener('click', closeModal); });
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){
+    if(!modal.classList.contains('open')) return;
+    if(e.key === 'Escape'){ closeModal(); return; }
+    if(e.key === 'Tab'){
+      var f = modal.querySelectorAll('button'); var first=f[0], last=f[f.length-1];
+      if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // 고민 선택
+  var note = document.getElementById('concern-note');
+  document.querySelectorAll('[data-concern]').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('[data-concern]').forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+      if(b.dataset.concern === 'lift'){
+        note.hidden = true;
+        var d = document.getElementById('detail');
+        d.scrollIntoView({behavior:'smooth', block:'start'});
+        d.style.boxShadow = '0 0 0 3px #a88a5a';
+        setTimeout(function(){ d.style.boxShadow=''; }, 1600);
+      } else {
+        note.hidden = false;
+        note.innerHTML = '<strong>' + b.querySelector('strong').textContent + '</strong> — 실제 제작 시 연결할 안내 영역입니다. 이 시연에서는 ‘처짐·탄력’ 한 가지만 진료 안내 예시까지 이어 두었습니다.';
+        note.focus();
+      }
+    });
+  });
+
+  // 이벤트 필터
+  var cur = 'all';
+  function applyFilter(){
+    var shown = 0;
+    document.querySelectorAll('.ev').forEach(function(ev){
+      var ok = cur==='all' || ev.dataset.state===cur;
+      ev.hidden = !ok; if(ok) shown++;
+    });
+    document.getElementById('ev-empty').hidden = shown>0;
+  }
+  document.querySelectorAll('[data-filter]').forEach(function(b){
+    b.addEventListener('click', function(){
+      cur = b.dataset.filter;
+      document.querySelectorAll('[data-filter]').forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+      applyFilter();
+    });
+  });
+
+  // 관리 시연
+  var evA = document.getElementById('evA'), st = document.getElementById('st'), toast = document.getElementById('toast');
+  function setState(s){
+    evA.dataset.state = s;
+    var badge = evA.querySelector('[data-status]');
+    badge.textContent = LABEL[s]; badge.className = 'status ' + s;
+    evA.classList.toggle('ended', s==='off');
+    document.getElementById('flow-end').classList.toggle('cur', s==='off');
+    document.getElementById('flow-pub').classList.toggle('cur', s!=='off');
+    applyFilter();
+  }
+  document.getElementById('apply').addEventListener('click', function(){
+    setState(st.value);
+    toast.textContent = '시연 적용 완료. 실제 사이트에는 게시되지 않았습니다. (위 ‘프로그램’ 목록과 필터에 반영됨)';
+  });
+  document.getElementById('reset').addEventListener('click', function(){
+    st.value = 'on'; setState('on'); toast.textContent = '초기 상태로 되돌렸습니다.';
+  });
+})();
+</script>
+</body>
+</html>
