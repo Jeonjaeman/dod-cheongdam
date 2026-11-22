@@ -67,6 +67,26 @@ h1 .hl{background:linear-gradient(90deg,#fff,var(--accent-hi));-webkit-backgroun
 .order p{margin:4px 0 0;font-size:13px;color:var(--mut2)}
 .order div.geo{border-style:dashed}
 @media(max-width:760px){.order{grid-template-columns:1fr 1fr}}
+.top .cta2{font-size:13px;font-weight:700;color:#fff;border:1px solid var(--line2);padding:7px 13px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.top .ctas a{display:inline-flex;align-items:center;min-height:44px;padding-top:0;padding-bottom:0}
+.top .ctas{display:flex;gap:8px;align-items:center}
+@media(max-width:520px){.top .cta,.top .cta2{padding:7px 10px;font-size:12px}.brand{font-size:12px}}
+.docs{margin-top:44px;border:1px solid var(--line2);border-radius:20px;background:rgba(14,25,48,.55);padding:26px}
+.docs>h2{margin:0;font-size:19px;letter-spacing:-.01em}
+.docs>p{margin:6px 0 0;color:var(--mut2);font-size:14px}
+.docs ol{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.docs li{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;padding:18px;background:rgba(6,9,16,.45)}
+.docs li small{font-size:12px;color:var(--accent-hi);font-weight:700;letter-spacing:.08em}
+.docs li strong{font-size:17px;margin-top:4px}
+.docs li p{margin:6px 0 14px;font-size:13.5px;color:var(--mut)}
+.docs li a{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none}
+.docs .d-rep{color:#fff;border:1px solid var(--accent-hi)}
+.docs .d-pro{color:var(--mut);border:1px dashed var(--line2)}
+.docs .d-dr{color:#0b0f18;background:#f1ece2}
+.docs li.dr{border-color:rgba(241,236,226,.35)}
+.docs .fine2{margin-top:14px;font-size:12.5px;color:var(--mut2)}
+@media(max-width:860px){.docs ol{grid-template-columns:1fr}.docs{padding:20px}}
+
 
 /* 섹션 공통 */
 section.s{padding:90px 0;border-top:1px solid var(--line)}
@@ -240,7 +260,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <a href="#geo">GEO</a>
       <a href="#road">진행 순서</a>
     </nav>
-    <a class="cta" href="./report.html">AI 진단 보고서</a>
+    <div class="ctas"><a class="cta2" href="./report.html">AI 진단 보고서</a><a class="cta" href="https://jeonjaeman.github.io/dod-cheongdam-drafts/">디자인 초안 3종</a></div>
   </div>
 </header>
 
@@ -262,6 +282,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <div><small>STEP 3</small><strong>규격화된 리뉴얼</strong><p>입력·승인·게시의 틀</p></div>
       <div class="geo"><small>STEP 4</small><strong>GEO 최적화</strong><p>정리된 정보 위에 더하기</p></div>
     </div>
+
+    <section class="docs rv" aria-labelledby="docs-h">
+      <h2 id="docs-h">이 자료는 세 부분으로 되어 있습니다</h2>
+      <p>아래 순서로 보시면 진단 → 개선 방향 → 디자인 초안이 이어집니다.</p>
+      <ol>
+        <li><small>① 분석</small><strong>AI 검색 진단 보고서</strong><p>검색·AI 서비스에서 디오디청담이 어떻게 보이는지, 주변 피부과 7곳과 비교해 진단했습니다.</p><a class="d-rep" href="./report.html">보고서 보기 →</a></li>
+        <li><small>② 개선 방향</small><strong>리뉴얼 제안</strong><p>지켜야 할 가치, 개선할 점, 병원 맞춤 관리시스템과 진행 순서를 이 페이지에 정리했습니다.</p><a class="d-pro" href="#value">제안 읽기 ↓</a></li>
+        <li class="dr"><small>③ 디자인 초안</small><strong>메인페이지 초안 3종</strong><p>공간 시네마 · 클리니컬 아틀라스 · DOD 저널, 세 방향의 메인페이지 초안입니다. 모바일에서도 보실 수 있습니다.</p><a class="d-dr" href="https://jeonjaeman.github.io/dod-cheongdam-drafts/">초안 3종 보기 →</a></li>
+      </ol>
+      <p class="fine2">초안은 개선 방향과 강점을 보여 드리는 메인페이지 시안이며 최종 완성본이 아닙니다. 실제 제작은 충분히 협의한 뒤 구체적인 기획안을 마련해 진행합니다.</p>
+    </section>
   </div>
 </section>
 
@@ -496,6 +527,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="wrap">
     <h2 class="rv">지금의 품격은 지키고,<br>찾기 쉽고 관리하기 쉬운 구조로.</h2>
     <p class="rv">환자에게는 ‘무엇을 상담하면 좋을지 알 수 있는 홈페이지’, 병원에는 ‘바뀌는 정보를 정확하게 운영할 수 있는 홈페이지’를 제안드립니다. GEO는 이 기본을 대체하는 출발점이 아니라, 잘 정리한 정보를 더 정확하게 전달하기 위한 다음 단계입니다.</p>
+    <a class="btn rv" href="https://jeonjaeman.github.io/dod-cheongdam-drafts/" style="margin-right:8px">디자인 초안 3종 보기 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <a class="btn rv" href="https://tengtengsoft.kr/inquiry">탱탱소프트 문의하기 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </section>
@@ -518,7 +550,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <footer>
   <div class="wrap">
     <span>TENGTENG SOFT 탱탱소프트 · 사업자등록번호 380-07-03649</span>
-    <span><a href="./report.html">AI 검색 상세 진단 보고서</a> · <a href="https://tengtengsoft.kr">tengtengsoft.kr</a></span>
+    <span><a href="./report.html">AI 검색 상세 진단 보고서</a> · <a href="https://jeonjaeman.github.io/dod-cheongdam-drafts/">디자인 초안 3종</a> · <a href="https://tengtengsoft.kr">tengtengsoft.kr</a></span>
   </div>
 </footer>
 
