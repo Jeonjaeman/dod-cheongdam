@@ -71,6 +71,26 @@ h1 .hl{background:linear-gradient(90deg,#fff,var(--accent-hi));-webkit-backgroun
 .top .ctas a{display:inline-flex;align-items:center;min-height:44px;padding-top:0;padding-bottom:0}
 .top .ctas{display:flex;gap:8px;align-items:center}
 @media(max-width:520px){.top .cta,.top .cta2{padding:7px 10px;font-size:12px}.brand{font-size:12px}}
+.key{margin-top:44px;border:1px solid rgba(90,160,255,.45);border-radius:22px;padding:30px;background:radial-gradient(ellipse at 100% 0,rgba(39,102,248,.28),transparent 60%),rgba(10,18,36,.8)}
+.key .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;color:#0b0f18;background:var(--accent-hi);border-radius:999px;padding:4px 12px}
+.key h2{margin:14px 0 0;font-size:clamp(22px,2.6vw,30px);line-height:1.35;letter-spacing:-.02em}
+.key .lead2{margin:8px 0 0;color:var(--mut);font-size:15.5px;max-width:760px}
+.key ol{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:k}
+.key li{position:relative;border:1px solid var(--line2);border-radius:16px;padding:18px 18px 16px;background:rgba(6,9,16,.5);counter-increment:k}
+.key li::before{content:"0" counter(k);font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--accent-hi)}
+.key li:not(:last-child)::after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--accent-hi);font-weight:700;z-index:1}
+.key li strong{display:block;font-size:17px;margin-top:4px}
+.key li p{margin:6px 0 0;font-size:13.5px;color:var(--mut)}
+.key .why{margin:18px 0 0;font-size:14px;color:var(--mut);border-left:2px solid var(--accent);padding:2px 0 2px 12px}
+.key .fine3{margin:10px 0 0;font-size:12.5px;color:var(--mut2)}
+.scope2{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.scope2>div{border:1px solid var(--line2);border-radius:18px;padding:22px;background:rgba(14,25,48,.55)}
+.scope2 small{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--accent-hi)}
+.scope2 h3{margin:4px 0 8px;font-size:18px}
+.scope2 ul{margin:0;padding-left:1.1em;font-size:14px;color:var(--mut)}
+.scope2 li{margin:.2rem 0}
+.scope2 p{margin:10px 0 0;font-size:13px;color:var(--mut2)}
+@media(max-width:860px){.key{padding:22px}.key ol{grid-template-columns:1fr}.key li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-15px;transform:translateX(-50%)}.scope2{grid-template-columns:1fr}}
 .docs{margin-top:44px;border:1px solid var(--line2);border-radius:20px;background:rgba(14,25,48,.55);padding:26px}
 .docs>h2{margin:0;font-size:19px;letter-spacing:-.01em}
 .docs>p{margin:6px 0 0;color:var(--mut2);font-size:14px}
@@ -283,6 +303,19 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <div class="geo"><small>STEP 4</small><strong>GEO 최적화</strong><p>정리된 정보 위에 더하기</p></div>
     </div>
 
+
+    <section class="key rv" aria-labelledby="key-h">
+      <span class="tag">실제 제작 시 구축할 구조</span>
+      <h2 id="key-h">기존 홈페이지와 가장 크게 달라지는 점</h2>
+      <p class="lead2">이벤트를 ‘보여 주는 이미지’에서 ‘검색과 상담으로 이어지는 콘텐츠’로 바꿉니다.</p>
+      <ol>
+        <li><strong>전용 관리자에서 이벤트 등록</strong><p>이벤트 등록·수정, 게시 기간, 진행·종료 상태를 자체 제작 관리자페이지에서 관리합니다.</p></li>
+        <li><strong>이벤트별 상세페이지 발행</strong><p>이벤트마다 고유 주소의 상세페이지에 대상·기간·시술 구성·가격 및 조건·주의사항을 검색엔진이 읽을 수 있는 글로 정리합니다. 입력한 정보는 메인·목록·상세에 일관되게 반영됩니다.</p></li>
+        <li><strong>검색 유입 · 상담 연결</strong><p>각 상세페이지에서 해당 이벤트 상담으로 바로 이어지도록 설계합니다.</p></li>
+      </ol>
+      <p class="why">지금의 이벤트 페이지는 내용이 주로 이미지로 되어 있어, 검색엔진과 AI가 기간·대상·조건을 글자로 읽기 어렵습니다. 이 구조를 개선하는 제안입니다.</p>
+      <p class="fine3">검색 노출이나 순위를 보장하는 것은 아니며, 실제 제작 시 색인·수집 가능 여부까지 점검합니다. 메인페이지 초안 3종에는 이벤트 상세·관리자 화면이 포함되어 있지 않으며, 실제 제작 시 기획안에 구체적으로 담습니다.</p>
+    </section>
     <section class="docs rv" aria-labelledby="docs-h">
       <h2 id="docs-h">이 자료는 세 부분으로 되어 있습니다</h2>
       <p>아래 순서로 보시면 진단 → 개선 방향 → 디자인 초안이 이어집니다.</p>
@@ -293,6 +326,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       </ol>
       <p class="fine2">초안은 개선 방향과 강점을 보여 드리는 메인페이지 시안이며 최종 완성본이 아닙니다. 실제 제작은 충분히 협의한 뒤 구체적인 기획안을 마련해 진행합니다.</p>
     </section>
+
+    <div class="scope2 rv" aria-label="제안 범위">
+      <div>
+        <small>범위 A · 바로 시작 가능</small>
+        <h3>현재 사이트 디자인 관리(월 관리)</h3>
+        <ul>
+          <li>홈페이지(주 1회): 팝업·이벤트 배너·기존 페이지 수정과 새 페이지 디자인</li>
+          <li>인쇄·안내물(월 1회): 환자 안내문, 국문·영문 브로셔·소개책자</li>
+        </ul>
+        <p>리뉴얼 여부와 관계없이 현재 홈페이지에서 시작할 수 있습니다. 작업 수량·규격·수정 범위·납기를 확인한 뒤 월 관리비와 포함 범위를 안내드립니다.</p>
+      </div>
+      <div>
+        <small>범위 B · 선택 시 진행</small>
+        <h3>리뉴얼 · 이벤트 관리 시스템 구축</h3>
+        <ul>
+          <li>병원 맞춤 자체 제작 홈페이지와 관리자페이지</li>
+          <li>이벤트별 상세페이지와 상담 연결, 검색·AI가 읽기 쉬운 구조</li>
+        </ul>
+        <p>위 진단·제안과 디자인 초안을 바탕으로 협의한 뒤 구체적인 기획안을 마련해 제작합니다. 구축과 월 관리는 범위와 비용을 구분해 안내드립니다.</p>
+      </div>
+    </div>
   </div>
 </section>
 
