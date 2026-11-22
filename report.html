@@ -74,6 +74,8 @@ p{margin:0 0 12px;color:var(--mut);font-size:16px}
 .js .rv.l{transform:translateX(-50px)}.js .rv.r{transform:translateX(50px)}.js .rv.s{transform:scale(.9)}
 .js .rv.l.is-in,.js .rv.r.is-in,.js .rv.s.is-in{transform:none}
 @media(max-width:640px){.js .rv.l,.js .rv.r{transform:translateY(40px)}}
+/* 오른쪽에서 들어오는 등장 효과가 화면 밖으로 밀려 가로 넘침을 만들지 않도록: 여백이 적은 폭에서는 세로 등장 */
+@media(max-width:1180px){.js .rv.r{transform:translateY(40px)}}
 
 /* ── 히어로 ── */
 .hero{min-height:100vh;display:flex;align-items:center;padding-top:100px}
